@@ -32,19 +32,19 @@ export const buttonStyle = cva(
       {
         variant: "solid",
         colorScheme: "primary",
-        className: "bg-sky-950 hover:bg-sky-900",
+        className: "bg-red-950 hover:bg-red-900",
       },
       {
         variant: "outline",
-        className: "text-sky-950 border-sky-950 bg-transparent hover:bg-sky-50",
+        className: "text-red-950 border-red-950 bg-transparent hover:bg-red-50",
       },
       {
         variant: "ghost",
-        className: "text-sky-950 hover:bg-sky-50",
+        className: "text-red-950 hover:bg-red-50",
       },
       {
         variant: "plain",
-        className: "text-sky-950",
+        className: "text-red-950",
       },
     ],
     defaultVariants: {
