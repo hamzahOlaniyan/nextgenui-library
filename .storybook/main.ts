@@ -6,14 +6,19 @@ const config: StorybookConfig = {
     "@storybook/addon-essentials",
     "@storybook/addon-onboarding",
     "@chromatic-com/storybook",
-    "@storybook/experimental-addon-test",
+    "@storybook/addon-interactions",
   ],
   framework: {
     name: "@storybook/react-vite",
     options: {},
   },
-  core: {
-    builder: "@storybook/builder-vite", // 👈 The builder enabled here.
-  },
+  // viteFinal: async (config) => {
+  //   config.css = {
+  //     postcss: {
+  //       plugins: [require("tailwindcss"), require("autoprefixer")],
+  //     },
+  //   };
+  //   return config;
+  // },
 };
 export default config;
