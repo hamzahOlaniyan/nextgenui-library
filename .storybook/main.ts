@@ -12,13 +12,5 @@ const config: StorybookConfig = {
     name: "@storybook/react-vite",
     options: {},
   },
-  // viteFinal: async (config) => {
-  //   config.css = {
-  //     postcss: {
-  //       plugins: [require("tailwindcss"), require("autoprefixer")],
-  //     },
-  //   };
-  //   return config;
-  // },
 };
 export default config;

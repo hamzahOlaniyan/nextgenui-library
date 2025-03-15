@@ -7,7 +7,7 @@ export default {
   //   important: ".ng", // Ensures Tailwind styles work inside a parent ".ng" div
   content: [
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
-    "./.storybook/**/*.{js,ts,jsx,tsx,mdx}",
+    // "./.storybook/**/*.{js,ts,jsx,tsx,mdx}",
   ], // Ensure it scans all files
   theme: {
     extend: {

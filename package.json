@@ -25,13 +25,13 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build && npm run build:css",
-    "build:css": "tailwindcss -m -i ./src/tailwind.css -o ./dist/styles.css",
+    "build:css": "npx @tailwindcss/cli -m -i ./src/tailwind.css -o ./dist/styles.css",
     "lint": "eslint . --ext ts,tsx --report-unused-disabled-directives --max-warnings 0",
     "preview": "vite preview",
-    "storybook": "storybook dev -p 6006",
-    "storybook:css": "tailwindcss -w -i ./src/tailwind.css -o ./src/index.css",
+    "storybook": "concurrently 'npm run storybook:css' 'storybook dev -p 6006'",
+    "storybook:css": "npx @tailwindcss/cli -w -i ./src/tailwind.css -o ./src/index.css",
     "build-storybook": "concurrently 'npm run build-storybook:css' 'storybook build'",
-    "build-storybook:css": "tailwindcss -m -i ./src/tailwind.css -o ./src/index.css",
+    "build-storybook:css": "npx @tailwindcss/cli -m -i ./src/tailwind.css -o ./src/index.css",
     "prepublicOnly": "npm run build"
   },
   "peerDependencies": {
@@ -50,6 +50,9 @@
     "@storybook/react": "^8.6.4",
     "@storybook/react-vite": "^8.6.4",
     "@storybook/test": "^8.6.4",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@types/jest": "^29.5.14",
     "@types/node": "^22.13.10",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
@@ -64,6 +67,8 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "eslint-plugin-storybook": "^0.11.4",
     "globals": "^15.15.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "playwright": "^1.51.0",
     "storybook": "^8.6.4",
     "tailwind-merge": "^3.0.2",
@@ -77,5 +82,11 @@
     "extends": [
       "plugin:storybook/recommended"
     ]
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.14",
+    "@tailwindcss/postcss": "^4.0.14",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.0.14"
   }
 }
